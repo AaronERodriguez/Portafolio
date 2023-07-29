@@ -6,6 +6,20 @@ let pythonSkill = document.getElementById('python');
 let gitSkill = document.getElementById('git');
 let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, pythonSkill, gitSkill];
 
+const observer = new IntersectionObserver((entries) => {
+     entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show')
+        }
+     })
+})
+
+const hiddenElements = document.querySelectorAll('.hide');
+hiddenElements.forEach((el) => observer.observe(el))
+
 const skillHoverHandler = (event, id) => {
     skillContainer = [...document.getElementById(id).children];
     console.log(document.getElementById(id))
