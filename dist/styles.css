@@ -177,29 +177,6 @@ img {
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
   }
 }
-
-@media only screen and (max-width: 430px) and (min-width: 400px){
-    .home-text {
-        text-align: center;
-        margin-left: 16rem;
-        margin-top: 0;
-        line-height: 5;
-    }
-    .slider-thumb::before {
-        right: 15%;
-        top: 25%;
-        width: 300px;
-        height: 300px;
-        background-size: 400%;
-        background-position: 50% 20%;
-    }
-    #projects-container {
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-}
-
 @media only screen and (max-width: 320px) {
     .slider-thumb::before {
         left: 10%;
@@ -312,7 +289,63 @@ img {
         left: 0;
     }
 }
-@media only screen and (max-width: 600px) and (min-width: 376px){
+@media only screen and (max-width: 439px) and (min-width: 376px) {
+    .slider-thumb::before {
+        left: 20%;
+        top: 20%;
+        width: 250px;
+        height: 250px;
+        background-position: 50% 20%;
+        background-size: 400%;
+    }
+    .home-text {
+        position: relative;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 42px !important;
+    }
+    #second-title {
+        margin-top: 300px;
+    }
+    #third-title {
+        margin-bottom: 20px;
+    }
+    #home {
+        height: 100vh;
+        background-color: linear-gradient(0deg, #9923b0, #409900);
+        background-repeat: no-repeat;
+        width: 100vw;
+    }
+    #skills {
+        width: 100vw;
+        left: 0;
+    }
+    .skills-container {
+        justify-content: center;
+    }
+    #about-me {
+        width: 100vw;
+        left: 0;
+    }
+    #projects {
+        width: 100vw;
+        left: 0;
+    }
+    .img-container {
+        width: 20rem;
+    }
+    #projects-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    #contact {
+        width: 100vw;
+        left: 0;
+    }
+}
+@media only screen and (max-width: 600px) and (min-width: 440px){
     .slider-thumb::before {
         left: 15%;
         top: 20%;
