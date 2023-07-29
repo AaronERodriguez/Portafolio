@@ -9,6 +9,9 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
     },
+    screens: {
+      sm: "700px"
+    }
   },
   plugins: [
     require("flowbite/plugin"),
