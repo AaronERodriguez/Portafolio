@@ -16,14 +16,9 @@
     <nav>
         <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
             aria-controls="default-sidebar" type="button"
-            class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            class="fixed z-20 inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" fill-rule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-                </path>
-            </svg>
+            <i class="fa-solid fa-bars w-full h-auto text-2xl"></i>
         </button>
 
         <aside id="default-sidebar"
@@ -36,7 +31,7 @@
                             class="flex flex-col items-center p-2 text-gray-900 rounded-lg dark:bg-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <span class="mx-auto text-8xl text-purple-700"
                                 style="text-shadow: greenyellow -6px 0px">A</span>
-                            <span class="mx-auto text-xl">Aaron</span>
+                            <span class="">Aaron</span>
                         </a>
                     </li>
                     <li>
@@ -63,6 +58,13 @@
                             <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
                             </svg>
                             <span class="flex-1 ml-3 whitespace-nowrap">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="flex items-center p-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fa-solid fa-address-book flex-shrink-0 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" style="font-size: 2rem;"></i>
+                            <span class="ml-3">Contact Me</span>
                         </a>
                     </li>
                 </ul>
@@ -122,23 +124,75 @@
         </section>
         <section id="about-me" class="dark:text-white">
             <h1 class="text-5xl font-bold text-center p-5">About me</h1>
-            <p class="font-medium text-center p-5">I am a Web Developer that specializes in creating responsive and interactive websites.<br>
-                    React.js is my specialization because I love using it's power to make the website have many states.</p>
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 19V.352A3.451 3.451 0 0 0 7.5 0a3.5 3.5 0 0 0-3.261 2.238A3.5 3.5 0 0 0 2.04 6.015a3.518 3.518 0 0 0-.766 1.128c-.042.1-.064.209-.1.313a3.34 3.34 0 0 0-.106.344 3.463 3.463 0 0 0 .02 1.468A4.016 4.016 0 0 0 .3 10.5l-.015.036a3.861 3.861 0 0 0-.216.779A3.968 3.968 0 0 0 0 12a4.032 4.032 0 0 0 .107.889 4 4 0 0 0 .2.659c.006.014.015.027.021.041a3.85 3.85 0 0 0 .417.727c.105.146.219.284.342.415.072.076.148.146.225.216.1.091.205.179.315.26.11.081.2.14.308.2.02.013.039.028.059.04v.053a3.506 3.506 0 0 0 3.03 3.469 3.426 3.426 0 0 0 4.154.577A.972.972 0 0 1 9 19Zm10.934-7.68a3.956 3.956 0 0 0-.215-.779l-.017-.038a4.016 4.016 0 0 0-.79-1.235 3.417 3.417 0 0 0 .017-1.468 3.387 3.387 0 0 0-.1-.333c-.034-.108-.057-.22-.1-.324a3.517 3.517 0 0 0-.766-1.128 3.5 3.5 0 0 0-2.202-3.777A3.5 3.5 0 0 0 12.5 0a3.451 3.451 0 0 0-1.5.352V19a.972.972 0 0 1-.184.546 3.426 3.426 0 0 0 4.154-.577A3.506 3.506 0 0 0 18 15.5v-.049c.02-.012.039-.027.059-.04.106-.064.208-.13.308-.2s.214-.169.315-.26c.077-.07.153-.14.225-.216a4.007 4.007 0 0 0 .459-.588c.115-.176.215-.361.3-.554.006-.014.015-.027.021-.041.087-.213.156-.434.205-.659.013-.057.024-.115.035-.173.046-.237.07-.478.073-.72a3.948 3.948 0 0 0-.066-.68Z"/>
-                    </svg>
+            <p class="font-medium text-center p-5">I am a Web Developer that specializes in creating responsive and interactive websites for companies and startups.<br>
+                    React.js is my specialization because of it's power to make the website have many states and respond accordingly.</p>
         </section>
         <section id="projects" class="dark:text-white dark:bg-gray-900">
             <h1 class="text-5xl font-bold text-center p-5">Projects</h1>
             <div id="projects-container">
                 <div class="project" id="random-quote">
-                    <img src="./assets/project-picture copy.png" alt="random-quote" id="random-img">
+                    <div class="img-container">
+                        <img src="./assets/project-picture copy.png" alt="random-quote" id="random-img">
+                        <div class="middle">
+                            <span class="img-text mx-auto text-xl">Random Quote</span>
+                            <span class="font-medium text-center p-5">Generate a random movie quote</span>
+                            <div class="fig-container">
+                                <div class="figure">
+                                    <a href="https://github.com/AaronERodriguez/Random-Message" title="Github" target="_blank" class="project-a p-1 pt-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <button class="project-button ">
+                                            <i class="fa fa-github flex-shrink-0 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" style="font-size: 2rem;"></i>
+                                            Repository
+                                        </button>
+
+                                    </a>
+                                </div>
+                                <div class="figure">
+                                    <a href="https://aaronerodriguez.github.io/Random-Message/" title="Github" target="_blank" class="project-a p-1 pt-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <button class="project-button">
+                                            <i class="fa-solid fa-globe flex-shrink-0 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" style="font-size: 2rem;"></i>
+                                            Website
+                                        </button>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="project" id="random-quote">
-                    <img src="./assets/project-picture copy.png" alt="random-quote" id="random-img">
+                    <div class="img-container">
+                        <img src="./assets/project-picture copy.png" alt="random-quote" id="random-img">
+                        <div class="middle">
+                            <span class="img-text mx-auto text-xl">Random Quote</span>
+                            <span class="font-medium text-center p-5">Generate a random movie quote</span>
+                            <div class="fig-container">
+                                <div class="figure">
+                                    <a href="https://github.com/AaronERodriguez" title="Github" target="_blank" class="project-a p-1 pt-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <button class="project-button ">
+                                            <i class="fa fa-github flex-shrink-0 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" style="font-size: 2rem;"></i>
+                                            Repository
+                                        </button>
+
+                                    </a>
+                                </div>
+                                <div class="figure">
+                                    <a href="https://github.com/AaronERodriguez" title="Github" target="_blank" class="project-a p-1 pt-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <button class="project-button">
+                                            <i class="fa-solid fa-globe flex-shrink-0 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" style="font-size: 2rem;"></i>
+                                            Website
+                                        </button>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <footer id="contact" class="dark:text-white">
+            <a href="mailto: aarongt1808@gmail.com?"><button id="contact-button" class="text-5xl font-bold text-center p-5 bg-transparent dark:hover:bg-gray-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded text-purple-700" style="border-color: greenyellow;">Contact me</button></a>
+        </footer>
     </main>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

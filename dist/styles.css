@@ -2,8 +2,12 @@ body {
     background-color: rgb(31 41 55);
 }
 img {
+    opacity: 1;
+    display: block;
     height: auto;
     width: 25rem;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 #home {
   height: 100vh;
@@ -34,6 +38,24 @@ img {
     top: 100vh;
     margin-bottom: 0;
 }
+#contact {
+    width: calc(100vw - 16rem);
+    left: 16rem;
+    position: relative;
+    top: 100vh;
+    margin-bottom: 0;
+    text-align: center;
+}
+#contact-button {
+    margin: 5rem auto;
+    text-shadow: greenyellow -2px 0px; 
+}
+
+#contact-button:hover {
+    text-shadow: rgb(126 34 206) -4px 0px;
+    color: greenyellow
+}
+
 .home-text {
     margin-left: 18rem;
     margin-top: 12rem;
@@ -77,7 +99,49 @@ img {
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    padding: 2rem 0;
 }
+.middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(30 41 59);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+}
+.img-container {
+    position: relative;
+    width: 100%;
+}
+.img-text {
+    text-align: center;
+}
+
+.img-container:hover .middle {
+    opacity: 0.8;
+}
+
+.fig-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+
+.project-a {
+    position: relative;
+    border: solid 2px rgb(0, 0, 0);
+    background-color: black;
+    border-radius: 10%;
+}
+
 
 .slider-thumb::before {
   position: absolute;
@@ -148,6 +212,26 @@ img {
     .skills-container {
         justify-content: center;
     }
+    #about-me {
+        width: 100vw;
+        left: 0;
+    }
+    #projects {
+        width: 100vw;
+        left: 0;
+    }
+    .img-container {
+        width: 20rem;
+    }
+    #projects-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    #contact {
+        width: 100vw;
+        left: 0;
+    }
 }
 @media only screen and (max-width: 375px) and (min-width: 321px) {
     .slider-thumb::before {
@@ -184,6 +268,26 @@ img {
     .skills-container {
         justify-content: center;
     }
+    #about-me {
+        width: 100vw;
+        left: 0;
+    }
+    #projects {
+        width: 100vw;
+        left: 0;
+    }
+    .img-container {
+        width: 20rem;
+    }
+    #projects-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    #contact {
+        width: 100vw;
+        left: 0;
+    }
 }
 @media only screen and (max-width: 600px) and (min-width: 376px){
     .slider-thumb::before {
@@ -214,6 +318,23 @@ img {
         width: 100vw;
         left: 0;
     }
+    #about-me {
+        width: 100vw;
+        left: 0;
+    }
+    #projects {
+        width: 100vw;
+        left: 0;
+    }
+    #projects-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    #contact {
+        width: 100vw;
+        left: 0;
+    }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 601px){
@@ -234,6 +355,11 @@ img {
     #third-title {
         margin-top: 380px;
     }
+    #projects-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1115px) and (min-width: 769px) {
@@ -253,5 +379,8 @@ img {
     }
     #third-title {
         margin-top: 380px;
+    }
+    #projects-container {
+        justify-content: center;
     }
 }
