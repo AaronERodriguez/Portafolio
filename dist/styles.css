@@ -68,7 +68,7 @@ img {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 8rem;
     gap: 10px;
 }
@@ -89,7 +89,7 @@ img {
 #projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2rem 8rem 5rem 8rem;
     gap: 10px;
 }
