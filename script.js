@@ -1,14 +1,15 @@
-let htmlSkill = document.getElementById('html');
-let cssSkill = document.getElementById('css');
-let jsSkill = document.getElementById('js');
-let reactSkill = document.getElementById('react');
-let pythonSkill = document.getElementById('python');
-let gitSkill = document.getElementById('git');
-let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, pythonSkill, gitSkill];
+const htmlSkill = document.getElementById('html');
+const cssSkill = document.getElementById('css');
+const jsSkill = document.getElementById('js');
+const reactSkill = document.getElementById('react');
+const pythonSkill = document.getElementById('python');
+const gitSkill = document.getElementById('git');
+const nodeSkill = document.getElementById('node');
+const sqlSkill = document.getElementById('sql');
+const skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, pythonSkill, gitSkill, nodeSkill, sqlSkill];
 
 const observer = new IntersectionObserver((entries) => {
      entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
