@@ -9,7 +9,7 @@ let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, pythonSkill, gitSkill
 const tabs = document.querySelectorAll('.btn');
 const all_contents = document.querySelectorAll('.content');
 
-
+const possibleHashes = ['#home', '#about-me', '#skills', '#projects', '#contact']
 
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
@@ -56,11 +56,13 @@ skillsArr.forEach(skill => {
     });
 })
 
-if (window.location.hash) {
+console.log(window.location.hash)
+
+if (possibleHashes.includes(window.location.hash)) {
     const hash = window.location.hash;
     const hashId = hash.replace('#', '');
     const tab = document.getElementById(`${hashId}-btn`);
     tab.click();
 } else {
-    console.log(tabs[0])
+    tabs[0].click();
 }
