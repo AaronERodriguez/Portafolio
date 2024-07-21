@@ -11,10 +11,6 @@ img {
     backface-visibility: hidden;
 }
 
-#sidebar-button {
-
-}
-
 .content_box {
     width: calc(100% - 252px);
 }
@@ -83,6 +79,8 @@ to {
 }
 
 .self-image {
+    border-radius: 20%;
+    border: #ba26ff 3px solid;
     margin: auto 0;
     display: block;
     height: 60vh;
