@@ -1,5 +1,6 @@
 body {
     background-color: rgb(31 41 55);
+    overflow-x: hidden;
 }
 img {
     opacity: 1;
@@ -9,25 +10,98 @@ img {
     transition: .5s ease;
     backface-visibility: hidden;
 }
+
+#sidebar-button {
+
+}
+
+.content_box {
+    width: calc(100% - 252px);
+}
+
+#second-title {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 4rem;
+
+}
+
+#third-title {
+    font-size: 1rem !important;
+}
+
+.btn-list .active {
+    color: rgb(150, 88, 255) !important;
+}
+
+.btn-list .active span {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+  
+@-webkit-keyframes glow {
+from {
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #b000e6, 0 0 20px #c000e6, 0 0 35px #cb00e6, 0 0 30px #9200e6, 0 0 35px #d300e6;
+}
+to {
+    text-shadow: 0 0 10px #000000, 0 0 15px #6e278a, 0 0 20px #a739bd, 0 0 25px #9a3cc5, 0 0 30px #d54dff, 0 0 45px #db4dff, 0 0 40px #ba26ff;
+}
+}
+
+
+.content_box .content {
+    display: none;
+}
+
+.content_box .active {
+    display: unset;
+}
+
+
 #home {
   height: 100vh;
-  background: linear-gradient(90deg, #9923b0, #409900);
-  background-repeat: no-repeat;
-  width: 100vw;
-  position: absolute
+  width: calc(100vw - 16rem);
+  left: 16rem;
+  position: absolute;
 }
+
+.home-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.image-container {
+    border-radius: 20%;
+    background-color: #7a009910;
+    box-shadow: rgba(208, 46, 240, 0.4) 5px 5px, rgba(208, 46, 240, 0.3) 10px 10px, rgba(201, 46, 240, 0.2) 15px 15px, rgba(179, 46, 240, 0.1) 20px 20px, rgba(233, 46, 240, 0.05) 25px 25px;
+}
+
+.self-image {
+    margin: auto 0;
+    display: block;
+    height: 60vh;
+    width: auto;
+    mask-image: linear-gradient(black, transparent);
+    -webkit-mask-image: linear-gradient(black 60%, transparent 100%);
+}
+
+
 #skills {
     width: calc(100vw - 16rem);
     left: 16rem;
     position: relative;
-    top: 100vh;
     margin-bottom: 0;
 }
 #about-me {
     width: calc(100vw - 16rem);
     left: 16rem;
     position: relative;
-    top: 100vh;
     margin-bottom: 0;
     background-color: rgb(31 41 55);
 }
@@ -35,20 +109,22 @@ img {
     width: calc(100vw - 16rem);
     left: 16rem;
     position: relative;
-    top: 100vh;
     margin-bottom: 0;
 }
 #contact {
     width: calc(100vw - 16rem);
+    height: 100vh;
     left: 16rem;
     position: relative;
-    top: 100vh;
     margin-bottom: 0;
     text-align: center;
 }
 #contact-button {
     margin: 5rem auto;
-    text-shadow: greenyellow -2px 0px; 
+    text-shadow: greenyellow -2px 0px;
+    position: relative; 
+    display: block;
+    background-color: rgb(22, 30, 41);
 }
 
 #contact-button:hover {
@@ -57,15 +133,18 @@ img {
 }
 
 .home-text {
-    margin-left: 18rem;
-    margin-top: 12rem;
     line-height: 2;
+    text-align: center;
 }
 .my-name {
-    color: rgb(98, 0, 185);
+    color: rgb(136, 0, 255);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .skills-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -143,22 +222,6 @@ img {
 }
 
 
-.slider-thumb::before {
-  position: absolute;
-  content: "";
-  right: 3%;
-  top: 20%;
-  width: 450px;
-  height: 450px;
-  background-image: url('../assets/IMG_3970.png');
-  background-position: 50% 18%;
-  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-  will-change: border-radius, transform, opacity;
-  animation: sliderShape 5s linear infinite;
-  display: block;
-  z-index: 10;
-  -webkit-animation: sliderShape 5s linear infinite;
-}
 @keyframes sliderShape {
   0%,
   100% {
@@ -178,32 +241,34 @@ img {
   }
 }
 @media only screen and (max-width: 320px) {
-    .slider-thumb::before {
-        left: 10%;
-        top: 20%;
-        width: 250px;
-        height: 250px;
-        background-position: 50% 20%;
-        background-size: 400%;
+
+    #sidebar-button {
+        display: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #contact-button {
+        margin-top: 20rem;
+    }
+
+    .content_box {
+        width: 100vw;
+    }
+
+    .home-container {
+        flex-direction: column;
     }
     .home-text {
         position: relative;
         text-align: center;
-        margin-left: 0;
-        margin-top: 0;
         font-size: 42px !important;
-    }
-    #second-title {
-        margin-top: 300px;
-    }
-    #third-title {
-        margin-bottom: 20px;
     }
     #home {
         height: 100vh;
-        background-color: linear-gradient(0deg, #9923b0, #409900);
-        background-repeat: no-repeat;
         width: 100vw;
+        top: 0;
+        left: 0;
     }
     #skills {
         width: 100vw;
@@ -234,35 +299,37 @@ img {
     }
 }
 @media only screen and (max-width: 375px) and (min-width: 321px) {
-    .slider-thumb::before {
-        left: 10%;
-        top: 20%;
-        width: 300px;
-        height: 300px;
-        background-position: 50% 20%;
-        background-size: 400%;
+
+    #sidebar-button {
+        display: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #contact-button {
+        margin-top: 20rem;
+    }
+
+    .content_box {
+        width: 100vw;
+    }
+
+    .home-container {
+        flex-direction: column;
     }
     .home-text {
         position: relative;
         text-align: center;
-        margin-left: 0;
-        margin-top: 0;
         font-size: 38px !important;
-    }
-    #second-title {
-        margin-top: 320px;
-    }
-    #third-title {
-        margin-bottom: 15px;
     }
     #home {
         height: 100vh;
-        background-color: linear-gradient(0deg, #9923b0, #409900);
-        background-repeat: no-repeat;
         width: 100%;
+        left: 0;
+        top: 0;
     }
     #skills {
-        width: 100vw;
+        width: 100%;
         left: 0;
     }
     .skills-container {
@@ -290,35 +357,40 @@ img {
     }
 }
 @media only screen and (max-width: 439px) and (min-width: 376px) {
-    .slider-thumb::before {
-        left: 20%;
-        top: 20%;
-        width: 250px;
-        height: 250px;
-        background-position: 50% 20%;
-        background-size: 400%;
+
+    #sidebar-button {
+        display: absolute;
+        top: 0;
+        left: 0;
     }
+
+    #contact-button {
+        margin-top: 20rem;
+    }
+
+    .content_box {
+        width: 100vw;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
     .home-text {
-        position: relative;
         text-align: center;
         margin-left: 0;
         margin-top: 0;
         font-size: 42px !important;
     }
-    #second-title {
-        margin-top: 340px;
-    }
-    #third-title {
-        margin-bottom: 20px;
-    }
     #home {
         height: 100vh;
-        background-color: linear-gradient(0deg, #9923b0, #409900);
         background-repeat: no-repeat;
         width: 100vw;
+        left: 0;
+        top: 0;
     }
     #skills {
-        width: 100vw;
+        width: 100%;
         left: 0;
     }
     .skills-container {
@@ -346,6 +418,15 @@ img {
     }
 }
 @media only screen and (max-width: 600px) and (min-width: 440px){
+
+    .content_box {
+        width: 100%;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
     .slider-thumb::before {
         left: 15%;
         top: 20%;
@@ -394,10 +475,17 @@ img {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 601px){
+
+    .content_box {
+        width: 100vw;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
     .home-text {
         text-align: center;
-        margin-left: 16rem;
-        margin-top: 0;
         line-height: 1.5;
     }
     .slider-thumb::before {
@@ -408,9 +496,6 @@ img {
         background-size: 400%;
         background-position: 50% 20%;
     }
-    #third-title {
-        margin-top: 380px;
-    }
     #projects-container {
         align-items: center;
         justify-content: center;
@@ -419,22 +504,8 @@ img {
 }
 
 @media only screen and (max-width: 1115px) and (min-width: 769px) {
-    .home-text {
-        text-align: center;
-        margin-left: 16rem;
-        margin-top: 0;
-        line-height: 1.5;
-    }
-    .slider-thumb::before {
-        right: 22%;
-        top: 25%;
-        width: 320px;
-        height: 320px;
-        background-size: 400%;
-        background-position: 50% 20%;
-    }
-    #third-title {
-        margin-top: 380px;
+    .home-container {
+        flex-direction: column;
     }
     #projects-container {
         justify-content: center;
