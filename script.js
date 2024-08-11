@@ -2,9 +2,11 @@ let htmlSkill = document.getElementById('html');
 let cssSkill = document.getElementById('css');
 let jsSkill = document.getElementById('js');
 let reactSkill = document.getElementById('react');
+let nextSkill = document.getElementById('nextjs');
 let pythonSkill = document.getElementById('python');
+let sqlSkill = document.getElementById('sql');
 let gitSkill = document.getElementById('git');
-let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, pythonSkill, gitSkill];
+let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, nextSkill, sqlSkill, pythonSkill, gitSkill];
 
 const tabs = document.querySelectorAll('.btn');
 const all_contents = document.querySelectorAll('.content');
