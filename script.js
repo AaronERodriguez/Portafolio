@@ -1,12 +1,20 @@
 let htmlSkill = document.getElementById('html');
 let cssSkill = document.getElementById('css');
 let jsSkill = document.getElementById('js');
+let tsSkill = document.getElementById('ts');
 let reactSkill = document.getElementById('react');
 let nextSkill = document.getElementById('nextjs');
+let nodeSkill = document.getElementById("node");
+let clerkSkill = document.getElementById('clerk');
 let pythonSkill = document.getElementById('python');
 let sqlSkill = document.getElementById('sql');
+let convexSkill = document.getElementById('convex')
 let gitSkill = document.getElementById('git');
-let skillsArr = [htmlSkill, cssSkill, jsSkill, reactSkill, nextSkill, sqlSkill, pythonSkill, gitSkill];
+let githubSkill = document.getElementById('github');
+let tensorFlow = document.getElementById('tensorflow');
+let tailwindCSS = document.getElementById("tailwind");
+let java = document.getElementById("java")
+let skillsArr = [htmlSkill, cssSkill, jsSkill, tsSkill, reactSkill, nextSkill, nodeSkill, clerkSkill, sqlSkill, convexSkill, pythonSkill, gitSkill, githubSkill, tensorFlow, tailwindCSS, java];
 
 const tabs = document.querySelectorAll('.btn');
 const all_contents = document.querySelectorAll('.content');
