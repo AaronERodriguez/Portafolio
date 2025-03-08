@@ -1,7 +1,14 @@
 body {
     background-color: rgb(31 41 55);
     overflow-x: hidden;
+    cursor: url('../assets//cursor.png'), auto;
 }
+
+
+button:hover, .btn-list:hover, a:hover {
+    cursor: url('../assets//left.png'), auto;
+}
+
 img {
     opacity: 1;
     display: block;
